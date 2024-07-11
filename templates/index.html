@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cricket Wordle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Cricket Wordle</h1>
+<p>Guess the name of a cricketer in 6 tries.</p>
+<form action="/guess" method="post">
+<input type="text" name="guess">
+<input type="submit" value="Guess">
+</form>
+<ul>
+{% for guess in session.guesses %}
+<li>{{ guess }}</li>
+{% endfor %}
+</ul>
+<a href="/hint">Get a hint</a>
+<a href="/reset">Reset</a>
+<a href="/about">About</a>
+</body>
+</html>
+
+
